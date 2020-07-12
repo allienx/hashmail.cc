@@ -1,8 +1,21 @@
 {
   "name": "hashmail.cc",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Hashmail homepage and email generator.",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "fix:prettier": "prettier --write ."
+  },
   "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -10,19 +23,31 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eslint-config-prettier": "^6.11.0",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "2.0.5",
+    "typescript": "^3.9.6"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "prettier/react"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,html,json}": "prettier --write"
   },
   "browserslist": {
     "production": [
