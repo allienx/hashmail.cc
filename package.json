@@ -1,6 +1,6 @@
 {
   "name": "hashmail.cc",
-  "description": "Hashmail homepage and email generator.",
+  "description": "Hashmail email generator.",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
