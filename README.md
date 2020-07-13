@@ -2,8 +2,6 @@
 
 Hashmail email generator.
 
-[hashmail.cc](https://hashmail.cc)
-
 - [Create React App](https://create-react-app.dev)
 - [React](https://github.com/facebook/react/)
 - [chakra-ui](https://github.com/chakra-ui/chakra-ui/)
