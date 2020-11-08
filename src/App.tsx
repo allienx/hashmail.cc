@@ -1,11 +1,10 @@
 import React from 'react'
 import TextLoop from 'react-text-loop'
 import { Box, Button, Center, HStack, IconButton, Text } from '@chakra-ui/core'
-import { CheckIcon } from 'components/CheckIcon'
-import { CopyIcon } from 'components/CopyIcon'
+import { CheckIcon, CopyIcon } from '@chakra-ui/icons'
+import GitHubIcon from 'components/Icons/GitHubIcon'
 import { useElementCopy } from 'hooks/useElementCopy'
 import { useHashGenerator } from 'hooks/useHashGenerator'
-import { GithubIcon } from '../components/GithubIcon'
 
 const SPIN_DURATION_MS = 1000
 
@@ -73,7 +72,11 @@ export default function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GithubIcon />
+          <GitHubIcon
+            boxSize="2em"
+            color="#d1d5da"
+            _hover={{ color: '#6a737d' }}
+          />
         </Box>
       </Box>
     </>
