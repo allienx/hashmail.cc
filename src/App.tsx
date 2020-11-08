@@ -3,6 +3,7 @@ import TextLoop from 'react-text-loop'
 import { Box, Button, Center, HStack, IconButton, Text } from '@chakra-ui/core'
 import { CheckIcon, CopyIcon } from '@chakra-ui/icons'
 import GitHubIcon from 'components/Icons/GitHubIcon'
+import { FontFamilies } from 'config/constants'
 import { useElementCopy } from 'hooks/useElementCopy'
 import { useHashGenerator } from 'hooks/useHashGenerator'
 
@@ -34,15 +35,15 @@ export default function App() {
         <HStack
           ref={elementRef}
           as="div"
-          fontFamily="monospace"
+          fontFamily={FontFamilies.MONOSPACE}
           fontSize={['3xl', '5xl', '6xl']}
-          fontWeight="600"
+          fontWeight={700}
         >
           <TextLoop interval={loopInterval} children={options} />
           <Text as="div">@{domain}</Text>
         </HStack>
 
-        <HStack my="8">
+        <HStack my="8" justifyContent="center">
           <Button
             isDisabled={!!loopInterval}
             mr="2"
