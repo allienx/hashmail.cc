@@ -9,3 +9,4 @@ Hashmail email generator.
 - [copy-text-to-clipboard](https://github.com/sindresorhus/copy-text-to-clipboard)
 - [nanoid](https://github.com/ai/nanoid)
 - [SubtleCrypto.digest()](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)

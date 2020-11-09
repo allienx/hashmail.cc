@@ -8,6 +8,15 @@
 
 @font-face {
   font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-Medium.woff2') format('woff2'),
+    url('./fonts/JetBrainsMono-Medium.woff') format('woff'),
+    url('./fonts/JetBrainsMono-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
   src: url('./fonts/JetBrainsMono-Bold.woff2') format('woff2'),
     url('./fonts/JetBrainsMono-Bold.woff') format('woff'),
     url('./fonts/JetBrainsMono-Bold.ttf') format('truetype');
