@@ -1,17 +1,15 @@
 import React from 'react'
+import { NUM_RANDOM_EMAILS } from 'config/constants'
 import { generateRandomHashes } from 'util/generateRandomHashes'
 
-type HashDigest = {
+type RandomHash = {
+  id: string
   hash: string
   shortHash: string
 }
 
-const NUM_RANDOM_EMAILS = 1000
-
-export function useHashGenerator() {
-  const domain = 'hashmail.cc'
-
-  const [hashes, setHashes] = React.useState<HashDigest[]>([])
+export default function useRandomHashes() {
+  const [hashes, setHashes] = React.useState<RandomHash[]>([])
 
   React.useEffect(() => {
     async function generateHashes() {
@@ -20,13 +18,11 @@ export function useHashGenerator() {
       })
 
       setHashes(
-        randomHashes.map((hash) => {
+        randomHashes.map((hashId) => {
+          const { id, hash } = hashId
           const shortHash = hash.slice(0, 6)
 
-          return {
-            hash,
-            shortHash,
-          }
+          return { id, hash, shortHash }
         }),
       )
     }
@@ -35,7 +31,6 @@ export function useHashGenerator() {
   }, [])
 
   return {
-    domain,
     hashes,
   }
 }
